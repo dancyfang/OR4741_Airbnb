@@ -18,7 +18,7 @@ for c in ['LotArea','BldgArea','NumBldgs','UnitsRes','UnitsTotal',
 # zoning according to zipcode
 A={'10026','10027','10030','10037','10039'}
 df['Central Harlem'] = df['ZipCode'].isin(A)
-A={'10001', '10011', '10018', '10019', '10020', '10036'}
+A={'10001', '10011', '10018', '10019', '10020', '10036','10123','10118','10119','10103','10129'}
 df['Chelsea and Clinton'] = df['ZipCode'].isin(A)
 A={'10029', '10035'}
 df['East Harlem'] = df['ZipCode'].isin(A)
@@ -26,16 +26,19 @@ A={'10010', '10016', '10017', '10022'}
 df['Gramercy Park and Murray Hill'] = df['ZipCode'].isin(A)
 A={'10012', '10013', '10014'}
 df['Greenwich Village and Soho'] = df['ZipCode'].isin(A)
-A={'10004', '10005', '10006', '10007', '10038', '10280'}
+A={'10004', '10005', '10006', '10007', '10038', '10280','10281','10282'}
 df['Lower Manhattan'] = df['ZipCode'].isin(A)
 A={'10002', '10003', '10009'}
 df['Lower East Side'] = df['ZipCode'].isin(A)
 A={'10021', '10028', '10044', '10065', '10075', '10128'}
 df['Upper East Side'] = df['ZipCode'].isin(A)
-A={'10023', '10024', '10025'}
+A={'10023', '10024', '10025','10069'}
 df['Upper West Side'] = df['ZipCode'].isin(A)
 A={'10031', '10032', '10033', '10034', '10040'}
 df['Inwood and Washington Heights'] = df['ZipCode'].isin(A)
+
+# Zipcode 10463 actually belongs to Bronx so we need to drop it
+df = df[df['ZipCode'] != '10463']
 
 # delete address that does not start with numbers
 df = df[df['Address'].astype(str).str[0] != ' ']
