@@ -37,6 +37,11 @@ df['Upper West Side'] = df['ZipCode'].isin(A)
 A={'10031', '10032', '10033', '10034', '10040'}
 df['Inwood and Washington Heights'] = df['ZipCode'].isin(A)
 
+# Transfer all the true / false to 1 / 0.
+for c in ['Central Harlem','Chelsea and Clinton','East Harlem','Gramercy Park and Murray Hill','Greenwich Village and Soho',
+          'Lower Manhattan','Lower East Side','Upper East Side','Upper West Side','Inwood and Washington Heights']:
+    df[c] = df[c].astype('int64')
+
 # Zipcode 10463 actually belongs to Bronx so we need to drop it
 df = df[df['ZipCode'] != '10463']
 
