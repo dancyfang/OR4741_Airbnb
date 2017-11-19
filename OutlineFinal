@@ -1,0 +1,24 @@
+Outline for final report
+
+1. Abstract (C)
+2. Introduction
+  2.1 background (C)
+  2.2 data description (C)
+  2.3 cleaning (C)
+  2.4 visualization (S)
+3. model
+  3.1 l2 loss, no reg (D)
+  3.2 l2 loss, ridge reg (D)
+    proximal gradient
+  3.2 l2 loss, smooth reg (D)
+  3.3 l2 loss, lasso reg (C)
+  3.4 huber loss + reg? (S,D)
+4. numerical experiment
+  4.2 l2 loss, ridge reg
+      lambda parameter selection, 10-th fold cross validation
+      regression results discussion: coefficient, error(mse), visualization
+  BEST MODEL
+5. conclusion
+  5.1 conclusion, best model, project value
+  5.2 future improvement
+  
