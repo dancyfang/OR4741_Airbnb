@@ -17,6 +17,10 @@ Outline for final report
   4.2 l2 loss, ridge reg
       lambda parameter selection, 10-th fold cross validation
       regression results discussion: coefficient, error(mse), visualization
+      visualization:
+          cross-validation lambda selection
+          residual
+          
   BEST MODEL
 5. conclusion
   5.1 conclusion, best model, project value
