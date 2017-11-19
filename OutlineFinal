@@ -14,13 +14,16 @@ Outline for final report
   3.3 l2 loss, lasso reg (C)
   3.4 huber loss + reg? (S,D)
 4. numerical experiment
+  4.1 Data Splitting
+    10000 training, 6xxx testing, seed(1)
   4.2 l2 loss, ridge reg
       lambda parameter selection, 10-th fold cross validation
-      regression results discussion: coefficient, error(mse), visualization
+      regression results discussion: coefficient, error(mse)
       visualization:
           cross-validation lambda selection
           residual
-          
+          coeffients plot
+          prediction vs true
   BEST MODEL
 5. conclusion
   5.1 conclusion, best model, project value
